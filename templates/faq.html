@@ -1,0 +1,39 @@
+{% extends 'pandemicHome.html' %}
+
+{% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Frequently Asked Questions</h1>
+        <form action="https://facebook.com/niceman.foundation">
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                    <button type="submit" class="btn btn-sm btn-outline-secondary"><i
+                            class="fab fa-facebook-f"></i> Follow on Facebook
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <h5 class="mb-4">Guideline On Social Distancing In <a href="{% url 'index' %}">Nigeria</a></h5>
+    <hr>
+    {% for guide in health_guides %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h2 class="h2 titles">{{guide.title}}</h2>
+                <p> {{guide.created_at}}</p>
+            </div>
+            <div class="col-lg-8">
+                <h5 class="">{{guide.body}}</h5>
+            </div>
+        </div>
+    </div>
+    <hr>
+    {% endfor %}
+
+</main>
+
+{% endblock %}

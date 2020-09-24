@@ -1,0 +1,17 @@
+body{
+padding: 0;
+margin: 0;
+}
+
+.notation{
+    font-weight: 700;
+}
+
+.lighter-text{
+    font-weight: normal;
+}
+
+.donor-card{
+    height: 300px;
+}
+
